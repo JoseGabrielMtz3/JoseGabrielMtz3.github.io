@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Unidad 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="cssu.css">
+</head>
+<body>
+<header>
+ <h1>1.7 Manejo de errores semánticos</h1>
+ <section>
+    Hecho por: Yamilet Zapata Hernandez 
+    <time>06/03/2021</time>
+    </section>
+</header>
+
+<section>
+<article>
+    <h2>Manejo de errores semánticos</h2>
+    Los errores semánticos son pocos y los que existen no se pueden detectar tan fácilmente. <br>
+    Hasta esta etapa los errores son mostrados a los usuarios. Los demás errores ya son muy difíciles de detectar y generalmente se dan en tiempo de ejecución <br>
+   Algunos problemas se presentan durante la fase de gestión de memoria al pasar argumentos o al crear la pila semántica. <br>
+   Muchos errores se generan durante la etapa del enlazador, al tratar de obtener código existente de algunas funciones/métodos ya implementadas en bibliotecas/APIs.<br>
+   Un erros semántico se produce cuando la sintaxis del código es correcta, pero la semántica o significado no es el  que se pretendía. La construcción obedece las reglas de lenguaje, y ´por ello el compilador o interprete no detecta los errores semánticos. Los compiladores e intérpretes solo se ocupan de la estructura del código que se escribe, y no de su significado. Un error semántico puede hacer que el programa termine de forma anormal con o sin un mensaje de error. Hablando en términos coloquiales, puede hacer que el equipo se quede “colgado”.
+   <br>
+   Un compilador es un sistema que en la mayoría de los casos tiene que manejar
+   una entrada incorrecta. Sobretodo en las primeras etapas de la creación de un
+   programa,   es   probable   que   el   compilador   se   utilizará   para   efectuar   las
+   características que debería proporcionar un buen sistema de edición dirigido por la
+   sintaxis, es decir, para determinar si las variables han sido declaradas antes de
+   usarla, o si faltan corchetes o algo así. Por lo tanto, el manejo de errores es parte
+   importante de un compilador y el escritor del compilador siempre debe tener esto
+   presente durante su diseño.<br>
+   Hay que señalar que los posibles errores ya deben estar considerados al diseñar
+   un  lenguaje   de  programación.  <br><br> Por  ejemplo,   considerar si   cada proposición  del
+   lenguaje de programación comienza con una palabra clave diferente (excepto la
+   proposición   de   asignación,   por   supuesto).   Sin   embargo,   es   indispensable   lo
+   siguiente:<br><br>
+   1. El compilador debe ser capaz de detectar errores en la entrada;<br>
+   2. El   compilador   debe recuperarse   de   los   errores sin   perder   demasiada
+   información;<br>
+   3. Y sobre todo, el compilador debe producir un mensaje de error que permita
+   al   programador   encontrar   y   corregir   fácilmente   los   elementos
+   (sintácticamente) incorrectos de su programa.<br><br>
+   Un compilador es un sistema que en la mayoría de los casos tiene que manejar
+   una entrada incorrecta. Sobretodo en las primeras etapas de la creación de un
+   programa,   es   probable   que   el   compilador   se   utilizará   para   efectuar   las
+   características que debería proporcionar un buen sistema de edición dirigido por la
+   sintaxis, es decir, para determinar si las variables han sido declaradas antes de
+   usarla, o si faltan corchetes o algo así. Por lo tanto, el manejo de errores es parte
+   importante de un compilador y el escritor del compilador siempre debe tener esto
+   presente durante su diseño.<br>
+   Hay que señalar que los posibles errores ya deben estar considerados al diseñar
+   un  lenguaje   de  programación.   Por  ejemplo,   considerar si   cada proposición  del
+   lenguaje de programación comienza con una palabra clave diferente (excepto la
+   proposición   de   asignación,   por   supuesto).   Sin   embargo,   es   indispensable   lo
+   siguiente:<br><br>
+   1. El compilador debe ser capaz de detectar errores en la entrada;<br>
+   2. El   compilador   debe recuperarse   de   los   errores sin   perder   demasiada
+   información;<br>
+   3. Y sobre todo, el compilador debe producir un mensaje de error que permita
+   al   programador   encontrar   y   corregir   fácilmente   los   elementos
+   (sintácticamente) incorrectos de su programa.<br><br>
+
+   <figure style="text-align: center;">
+       <img src="img/i6.jpg">
+   </figure>
+
+   Un compilador es un sistema que en la mayoría de sus casos tiene que manejar una entrada incorrecta, sobre todo en las primeras etapas de la creación de un programa, es probable que el compilador se utiliza para ejecutar las características que deberían  proporcionar un buen sistema de edición dirigido por la sintaxis es decir para determinar si las variables han sido declaradas antes de usarlas, o si faltan corchetes o algo así. Por lo tanto el manejo de errores es parte importante de un compilador y escritor del compilador siempre debe tener esto presente durante su diseño.                   <br>
+   Los errores que puede detectar el analizador sintáctico son aquellos que violan las reglas de una gramática independiente del contexto. Ya hemos mencionado que algunas de las características de un lenguaje de programación no pueden enunciarse con reglas independientes del contexto, ya que dependen de él; por ejemplo, la restricción de que los identificadores deben declararse previamente. Por lo tanto, los principales errores semánticos son:<br><br>
+   •	Conversiones de tipos no permitidas<br>
+    int x;<br>
+   x = 4.32;<br>
+    Error: Ej1.java [6:1] possible loss of precision<br>
+   •	Variables usadas y no definidas<br>
+   •	 Operandos de tipos no compatibles<br>
+   if (x || 5) x = 0;<br>
+    Error: Ej2.java [7:1] operator || cannot be applied to int,int<br>
+   Es mucho más difícil introducir métodos formales para la recuperación de errores semánticos que para la recuperación de errores sintácticos, ya que a menudo la recuperación de errores semánticos es ad hoc. No obstante, puede requerirse que, por lo menos, el error semántico sea informado al programador, que se le ignore y que, por tanto, se suprimirá la generación de código.<br>
+   <br>
+   Sin embargo, la mayoría de los errores semánticos pueden ser detectados mediante la revisión de la tabla de símbolos, suponiendo un tipo que se base en el contexto donde ocurra o un tipo universal que permita al identificador ser un operando de cualquier operador del lenguaje. Al hacerlo, evitamos la producción de un mensaje de error cada vez que se use la variable no definida. Si el tipo de un operando no concuerda con los requisitos de tipo del operador, también es conveniente reemplazar el operando con una variable ficticia de tipo universal.
+   <br>
+   En cierto modo, este tipo de error es el más difícil de depurar, ya que ni el compilador ni el sistema proporcionan información sobre qué está fallando. Lo único cierto es que el programa no se está comportando como debería. Un error semántico se produce cuando la sintaxis del código es correcta, pero la semántica o significado no es el que se pretendía. La construcción obedece las reglas del lenguaje, y por ello el compilador o intérprete no detectan los errores semánticos. Los compiladores e intérpretes sólo se ocupan de la estructura del código que se escribe, y no de su significado. 
+   <br><br>
+   <figure style="text-align: center;">
+    <img src="img/i7.png">
+</figure>
+
+<br>
+</article>
+</section>
+<section id="bibliografia">
+    <h3>
+        Bibliografia:
+    </h3>
+    
+    M.C. Juan Carlos Olivares Rojas. (2012). Unidad V Análisis Semántico. 07/03/2021, de itmorelia Sitio web: http://dsc.itmorelia.edu.mx/~jcolivares/courses/ps207a/ps2_u5.pdf<br><br>
+    UNIVERSIDAD AUTONOMA DEL ESTADO DE HIDALGO. (2015). Análisis semántico. 07/03/2021, de CIDECAM Sitio web: http://cidecame.uaeh.edu.mx/lcc/mapa/PROYECTO/libro32/index.html
+
+</section>
+
+
+
+<footer>
+    <a href="Integrantes.html" style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 25px; text-decoration: none;">
+        Siguiente tema
+    </a>
+</footer>
+
+
+</body>
+</html>

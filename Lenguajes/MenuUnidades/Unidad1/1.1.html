@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Unidad 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="cssu.css">
+</head>
+<body>
+<header>
+ <h1>1.1 Arboles de expresiones</h1>
+ <section>
+    Hecho por: Hermelinda Hernandez Bautista
+    <time>06/03/2021</time>
+    </section>
+</header>
+
+<section>
+<article>
+    <h2>Arboles de expresiones</h2>
+    Los árboles de expresiones representan el código de nivel del lenguaje en forma de datos. Los datos se almacenan en una estructura con forma de árbol. Cada nodo del árbol de expresión representa una expresión, por ejemplo, una llamada al método o una operación binaria, como x < y. <br>
+    Un árbol de expresión sirve para evaluar expresiones del tipo: <br> (a + b)*c/d <br>
+    Para que un árbol represente una expresión se deben tomar en cuenta 2
+    características muy importantes:<br><br>
+    •	Cualquier hoja está etiquetada sólo con un operando.<br>
+•	Cualquier nodo interior n está etiquetado por un operador.<br><br>
+<img src="img/i1.png"><br>
+Al introducir la expresión debemos de tomar en cuenta las siguientes características:<br><br>
+•	La raíz siempre debe ser un operador<br>
+•	Las hojas siempre deben ser operandos<br>
+•	Los nodos deben estar etiquetados por operadores<br>
+•	Si un operador tiene mayor prioridad que la raíz se coloca como hijo.<br>
+•	Si un operador tiene igual o menor prioridad que un nodo se coloca
+	como padre.<br>
+•	Un nodo puede contener como hijo otro subárbol que contiene un
+	pequeña expresión. <br><br>
+    En los árboles de expresión, la sucesión del preorden de etiquetas nos da lo que
+se conoce como la forma prefijo de una expresión.
+Análogamente, la sucesión postorden de las etiquetas de un árbol expresión nos
+da lo que se conoce como la representación postfijo de una expresión.
+Finalmente, el inorden de una expresión en un árbol de expresión nos da la
+expresión infijo en sí misma, pero sin paréntesis.<br>
+
+Construcción de un árbol de expresión<br>
+Algoritmo<br><br>
+•	Mientras carácter diferente de nulo<br>
+•	Leer carácter de la lista<br>
+•	Si es paréntesis pasar al siguiente carácter<br>
+•	Crear un nodo nuevo que contenga ese carácter<br>
+Operando<br>
+•	Si el árbol está vacío hacer raíz a nuevo, si no recorrer el árbol por la
+derecha hasta llegar a un nodo con hojas, si la hoja izquierda, no está
+etiquetada colocar operando, si no colocarlo en la hoja derecha.
+<br><br>
+Operador<br><br>
+•	Si la raíz es un operando, insertar nuevo en ese nodo, y convertir el
+	operando en el hijo izquierdo, si no si hay un paréntesis abierto insertar
+nuevo en la última hoja derecha y colocar operando como hijo izquierdo.<br>
+•	Si el carácter anterior es paréntesis izquierdo si el siguiente carácter es
+•paréntesis derecho si solo hay un operador en el árbol nuevo se convierte
+	en raíz, si no se inserta en el último nodo derecho, y el nodo se convierte	en hijo izquierdo.<br>
+•	Si no se cumple ninguna de las condiciones anteriores si la raíz es de igual
+	prioridad o menor prioridad convertir la raíz en el hijo izq. de nuevo si no la
+	prioridad del nodo raíz es mayor al de nuevo insertar nuevo como hijo
+	derecho y colocar el nodo reemplazado como hijo izquierdo.
+    <img src="img/i2.jpg">
+<br>
+</article>
+</section>
+<section id="bibliografia">
+    <h3>
+        Bibliografia:
+    </h3>
+    ITPN. (2011). Lenguajesyautomatas2. 2021, de ITPN Sitio web: http://itpn.mx/recursosisc/7semestre/leguajesyautomatas2/Unidad%20I.pdf
+</section>
+
+<footer>
+    <a href="1.2.html" style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 25px; text-decoration: none;">
+        Siguiente tema
+    </a>
+</footer>
+
+
+</body>
+</html>

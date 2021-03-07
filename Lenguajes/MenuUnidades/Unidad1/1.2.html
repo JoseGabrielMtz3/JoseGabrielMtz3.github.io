@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Unidad 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="cssu.css">
+</head>
+<body>
+<header>
+ <h1>1.2 Acciones semánticas de un analizador sintáctico</h1>
+ <section>
+    Hecho por: Hermelinda Hernandez Bautista
+    <time>06/03/2021</time>
+    </section>
+</header>
+
+<section>
+<article>
+    <h2>Acciones semánticas de un analizador sintáctico</h2>
+   <h3> Definición de un analizador sintáctico:<br></h3>
+     Es la fase del analizador que se encarga de
+    chequear el texto de entrada en base a una gramática dada. Y en caso de que el Programa de entrada sea válido, suministra el árbol sintáctico que lo reconoce.<br>
+    En teoría, se supone que la salida del analizador sintáctico es alguna representación del árbol sintáctico que reconoce la secuencia de Token suministrada por el analizador léxico.
+    <br>
+    En la práctica, el analizador sintáctico también hace:<br><br>
+    •	Acceder a la tabla de símbolos (para hacer parte del trabajo del analizador
+    semántico).<br>
+    •	Chequeo de tipos (del analizador semántico).<br>
+    •	Generar código intermedio.<br>
+    •	Generar errores cuando se producen.<br>
+    •	En definitiva, realiza casi todas las operaciones de la compilación. Este
+    	método de trabajo da lugar a los métodos de compilación dirigidos por
+	sintaxis.<br><br>
+    <h4>
+    Manejo de errores sintácticos</h4><br>
+    Los errores sintácticos son dados por una expresión aritmética o paréntesis no equilibrados. El manejo de errores de sintaxis es el más complicado desde el punto de vista de la creación de compiladores. Nos interesa que cuando el compilador encuentre un error, se recupere y siga buscando errores. Por lo tanto el manejador de errores de un analizador sintáctico tiene como objetivos:<br>
+    <br><br>
+    •	Indicar los errores de forma clara y precisa. Aclarar el tipo de error y
+    	su localización.<br>
+    •	Recuperarse del error, para poder seguir examinando la entrada.<br>
+    •	No ralentizar significativamente la compilación<br><br>
+    <h5> Tipo de gramática que acepta un analizador sintáctico</h5><br>
+    Nosotros nos centraremos en el análisis sintáctico para lenguajes basados en
+    gramáticas formales, ya que de otra forma se hace muy difícil la comprensión del
+    compilador, y se pueden corregir, quizás más fácilmente, errores de muy difícil
+    localización, como es la ambigüedad en el reconocimiento de ciertas sentencias.<br>
+    La gramática que acepta el analizador sintáctico es una gramática de contexto libre:<br>
+    Gramática: G (N, T, P, S)<br>
+    N = No terminales.<br>
+    T = Terminales.<br>
+    P = Reglas de Producción.<br>
+    S = Axioma Inicial.<br>
+    
+    
+    
+<br>
+</article>
+</section>
+<section id="bibliografia">
+    <h3>
+        Bibliografia:
+
+    </h3>
+    ITPN. (2011). Lenguajesyautomatas2. 2021, de ITPN Sitio web: http://itpn.mx/recursosisc/7semestre/leguajesyautomatas2/Unidad%20I.pdf
+</section>
+
+
+
+<footer>
+    <a href="1.3.html" style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 25px; text-decoration: none;">
+        Siguiente tema
+    </a>
+</footer>
+
+
+</body>
+</html>
