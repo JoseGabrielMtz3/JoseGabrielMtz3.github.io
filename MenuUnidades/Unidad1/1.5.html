@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Unidad 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="cssu.css">
+</head>
+<body>
+<header>
+ <h1>1.2 Acciones semánticas de un analizador sintáctico</h1>
+ <section>
+    Hecho por: Julio Cesar Perez Hernandez
+    <time>07/03/2021</time>
+    </section>
+</header>
+
+<section>
+<article>
+    <h2>Esquema de traducción</h2>
+    Un esquema de traducción es una gramática independiente de contexto en la que se asocian atributos con los símbolos gramaticales y se insertan acciones semánticas encerradas entre llaves { } dentro de los lados derechos de las producciones. Los esquemas de traducción pueden tener tantos atributos sintetizados como heredados.
+
+Cuando se diseña un esquema de traducción, se deben respetar algunas limitaciones para asegurarse de que el valor de un atributo esté disponible cuando una acción se refiera a él. Estas limitaciones, motivadas por las definiciones con atributos por la izquierda, garantizan que las acciones no hagan referencia a un atributo que aún no haya sido calculado. El ejemplo más sencillo ocurre cuando sólo se necesitan atributos sintetizados, en este caso, se puede construir el esquema de traducción creando una acción que conste de una asignación para cada regla semántica y colocando esta acción al final del lado derecho de la producción asociada. <br>
+    Un esquema de traducción es una gramática independiente del contexto en la cual se han insertado fragmentos de código en las partes derechas de sus reglas de producción. Los fragmentos de código asi insertados se denominan acciones semánticas. Dichos fragmentos actúan, calculan y modifican los atributos asociados con los nodos del árbol sintáctico. El orden en que se evalúan los fragmentos es el de un recorrido primero-profundo del árbol de análisis sintáctico.
+    Obsérvese que, en general, para poder aplicar un esquema de traducción hay que construir el árbol sintáctico y después aplicar las acciones empotradas en las reglas en el orden de recorrido primero-profundo. Por supuesto, si la gramática es ambigua una frase podría tener dos árboles y la ejecución de las acciones para ellos podría dar lugar a diferentes resultados. Si se quiere evitar la multiplicidad de resultados (interpretaciones semánticas) es necesario precisar de qué árbol sintáctico concreto se está hablando.
+    <br>
+    Por ejemplo, si en la regla A→αβ insertamos un fragmento de código:<br>
+ A→α{action}β<br>
+La acción {action} se ejecutará después de todas las acciones asociadas con el recorrido del subárbol de  α y antes que todas las acciones asociadas con el recorrido del subárbol β.<br>
+Las apariciones de variables sintácticas en una regla de producción se indexan como se ve en el ejemplo, para distinguir de que nodo del árbol de análisis estamos hablando. Cuando hablemos del atributo de un nodo utilizaremos una indexación tipo hash. Aquí VAL es un atributo de los nodos de tipo NUM denotando su valor numérico y para accederlo escribiremos $NUM{VAL}. Análogamente $expr{TRA} denota el atributo ``traducción'' de los nodos de tipo expr.
+<br><br>
+<figure style="text-align: center;">
+<img src="img/i3.jpg" style="text-align: center;">
+</figure>
+<h3>
+Traducción descendente </h3>
+Se trabaja con esquema de traducción en lugar de hacerlo con definiciones dirigidas por sintaxis, así que se puede ser explícito en cuanto al orden en que tienen que lugar las acciones y las evaluaciones de los atributos. 
+<br><br>
+<h3>
+Eliminación de la recursividad izquierda de un esquema de traducción 
+</h3>
+Como la mayoría de los operadores aritméticos son asociativos por la izquierda, es natural utilizar gramáticas recursivas por la izquierda para las expresiones. La transformación se aplica a esquemas de traducción con atributos sintetizados. <br>
+
+Para el análisis sintáctico descendente, se supone que una acción se ejecuta en el mismo momento en que se expandiría un símbolo en la misma posición. Un atributo heredado de un símbolo debe ser calculado por una acción que aparezca antes que el símbolo, y un atributo sintetizado del no terminal de la izquierda se debe calcular después de que hayan sido calculados todos los atributos de los que depende. <br>
+
+Un atributo heredado de un símbolo debe ser calculado por una acción que aparezca antes que el símbolo, y un atributo sintetizado del no terminal de la izquierda se debe calcular después de que hayan sido calculados todos los atributos de los que depende. <br>
+
+Los fragmentos de código así insertados se denominan acciones semánticas. Dichos fragmentos actúan, calculan y modifican los atributos asociados con los nodos del árbol sintáctico. El orden en que se evalúan los fragmentos es el de un recorrido primero-profundo del árbol de análisis sintáctico. <br>
+
+Obsérvese que, en general, para poder aplicar un esquema de traducción hay que construir el árbol sintáctico y después aplicar las acciones empotradas en las reglas en el orden de recorrido primero-profundo. Por supuesto, si la gramática es ambigua una frase podría tener dos árboles y la ejecución de las acciones para ellos podría dar lugar a diferentes resultados. Si se quiere evitar la multiplicidad de resultados (interpretaciones semánticas) es necesario precisar de qué árbol sintáctico concreto se está hablando.
+
+<br>
+</article>
+</section>
+<section id="bibliografia">
+    <h3>
+        Bibliografia:
+
+    </h3>
+    Lenguajes y Autómatas II. (2021). 1.5.- ESQUEMA DE TRADUCCIÓN. 2021, de SITE123 Sitio web: https://5e344735705b1.site123.me/unidad-i-%C3%81nalisis-sem%C3%A1ntico/15-esquema-de-traducci%C3%B3n
+</section>
+
+
+
+<footer>
+    <a href="1.6.html" style="color: white; font-family: Arial, Helvetica, sans-serif; font-size: 25px; text-decoration: none;">
+        Siguiente tema
+    </a>
+</footer>
+
+
+</body>
+</html>
