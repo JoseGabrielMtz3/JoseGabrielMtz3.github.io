@@ -10,7 +10,7 @@
     <div id="agrupar">
 <header id="cabecera">
     <h1>Unidad 3: Optimización</h1>
-    Integrantes: 
+    Hecho por: Hermelinda Santiago Bautista
     <time>15/05/2021</time>
 </header>
 <section id="bd">
@@ -50,8 +50,44 @@ El ensamblamiento es remplazar las expresiones por su resultado cuando se pueden
 <h3>Ejemplo</h3>
  A=2+3+A+C -> A=5+A+C<br><br>
 <h3>Ejemplo:</h3>
-Se añade el procesamiento de las constantes a las reglas de análisis de expresiones. Optimiza: 2+3+b -> 5+b
-
+Se añade el procesamiento de las constantes a las reglas de análisis de expresiones. Optimiza: 2+3+b -> 5+b.
+<br><br>
+<h2>3.1.2 Ciclos</h2>
+Los ciclos son una de las partes más esenciales en el rendimiento de un programa
+dado que realizan acciones repetitivas, y si dichas acciones están mal realizadas,
+el problema se hace N veces más grandes. La mayoría de las optimizaciones
+sobre ciclos tratan de encontrar elementos que no deben repetirse en un ciclo.<br>
+<h3>Ejemplos</h3>
+while(a == b) {<br>
+ int c = a;<br>
+ c = 5;<br>
+ …;<br>
+}<br>
+En este caso es mejor pasar el Int c =a; fuera del ciclo de ser posible.<br>
+El problema de la optimización en ciclos y en general radica es que muy difícil
+saber el uso exacto de algunas instrucciones. Así que no todo código de proceso
+puede ser optimizado. Otros uso de la optimización pueden ser el mejoramiento de
+consultas en SQL o en aplicaciones remotas (sockets, E/S, etc.)<br><br>
+<figure style="text-align: center;"><img src="imagenes/3.jpg"></figure>
+<br>
+<h2>3.1.2 Ciclos</h2>
+Los ciclos son una de las partes más esenciales en el rendimiento de un programa
+dado que realizan acciones repetitivas, y si dichas acciones están mal realizadas,
+el problema se hace N veces más grandes. La mayoría de las optimizaciones
+sobre ciclos tratan de encontrar elementos que no deben repetirse en un ciclo.<br><br>
+<h3>Ejemplos</h3><br>
+while(a == b) {<br>
+ int c = a;<br>
+ c = 5;<br>
+ …;<br>
+}<br><br>
+En este caso es mejor pasar el Int c =a; fuera del ciclo de ser posible.<br>
+El problema de la optimización en ciclos y en general radica es que muy difícil
+saber el uso exacto de algunas instrucciones. Así que no todo código de proceso
+puede ser optimizado. Otros uso de la optimización pueden ser el mejoramiento de
+consultas en SQL o en aplicaciones remotas (sockets, E/S, etc.)<br>
+<figure style="text-align: center;"> <img src="imagenes/4.png"> </figure>
+<figure style="text-align: center;"> <img src="imagenes/5.png"> </figure>
     
 </section>
 
