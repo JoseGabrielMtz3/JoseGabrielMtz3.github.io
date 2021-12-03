@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Unidad 4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="csss.css">
+</head>
+<body>
+    <div id="agrupar">
+<header id="cabecera">
+    <h1>4.3 Bases de Datos NoSql</h1>
+    Hecho por: Ricardo Martinez Franco
+    <time>29/11/2021</time>
+</header>
+<section id="bd">
+<h2>4.3 Bases de Datos NoSql</h2>
+Las bases de datos NoSQL son sistemas de almacenamiento de información que no cumplen con el esquema entidad–relación. Tampoco utilizan una estructura de datos en forma de tabla donde se van almacenando los datos, sino que para el almacenamiento hacen uso de otros formatos como clave–valor, mapeo de columnas o grafos.
+<br>
+Esta forma de almacenar la información ofrece ciertas ventajas sobre los modelos relacionales. Entre las ventajas más significativas podemos destacar:
+<br>
+<br>
+•	Se ejecutan en máquinas con pocos recursos: Estos sistemas, a diferencia de los sistemas basados en SQL, no requieren de apenas computación, por lo que se pueden montar en máquinas de un coste más reducido.
+<br>
+
+•	Escalabilidad horizontal: Para mejorar el rendimiento de estos sistemas simplemente se consigue añadiendo más nodos, con la única operación de indicar al sistema cuáles son los nodos que están disponibles.
+<br>
+•	Pueden manejar gran cantidad de datos: Esto es debido a que utiliza una estructura distribuida, en muchos casos mediante tablas Hash.
+<br>
+•	No genera cuellos de botella: El principal problema de los sistemas SQL es que necesitan transcribir cada sentencia para poder ser ejecutada, y cada sentencia compleja requiere además de un nivel de ejecución aún más complejo, lo que constituye un punto de entrada en común, que ante muchas peticiones puede ralentizar el sistema.
+<br>
+<br>
+<h3>Tipos de bases de datos NoSQL
+</h3>
+Dependiendo de la forma en la que almacenen la información, nos podemos encontrar varios tipos distintos de bases de datos NoSQL.
+<br><br>
+1.- Bases de datos clave – valor
+
+<figure style="text-align: center;"><img src="imagenes/w4.png"></figure>
+<br>
+Son el modelo de base de datos NoSQL más popular, además de ser la más sencilla en cuanto a funcionalidad. En este tipo de sistema, cada elemento está identificado por una llave única, lo que permite la recuperación de la información de forma muy rápida, información que habitualmente está almacenada como un objeto binario (BLOB). Se caracterizan por ser muy eficientes tanto para las lecturas como para las escrituras. 
+<br><br>
+Algunos ejemplos de este tipo son Cassandra, BigTable o HBase.<br><br>
+2.- Bases de datos documentales<br>
+<figure style="text-align: center;"><img src="imagenes/w5.png"></figure><br>
+
+Este tipo almacena la información como un documento, generalmente utilizando para ello una estructura simple como JSON o XML y donde se utiliza una clave única para cada registro. Este tipo de implementación permite, además de realizar búsquedas por clave–valor, realizar consultas más avanzadas sobre el contenido del documento. 
+<br>
+Son las bases de datos NoSQL más versátiles. Se pueden utilizar en gran cantidad de proyectos, incluyendo muchos que tradicionalmente funcionarían sobre bases de datos relacionales.
+<br><br>
+Algunos ejemplos de este tipo son MongoDB o CouchDB.
+<br><br>
+
+<figure style="text-align: center;"><img src="imagenes/w6.png"></figure><br>
+<br>
+En este tipo de bases de datos, la información se representa como nodos de un grafo y sus relaciones con las aristas del mismo, de manera que se puede hacer uso de la teoría de grafos para recorrerla. Para sacar el máximo rendimiento a este tipo de bases de datos, su estructura debe estar totalmente normalizada, de forma que cada tabla tenga una sola columna y cada relación dos.
+<br>
+Este tipo de bases de datos ofrece una navegación más eficiente entre relaciones que en un modelo relacional.
+<br><br>
+Algunos ejemplos de este tipo son Neo4j, InfoGrid o Virtuoso.<br>
+
+</section>
+
+<section id="hf">
+    <h3>
+        Bibliografia:
+    </h3>
+    Tópicos Selectos de TI: Tecnologías Emergentes en el Área de Base de Datos (topicos5101jhbc.blogspot.com)<br>
+    ¿Qué es Base de datos en la nube? - Definición en WhatIs.com (computerweekly.com)<br>
+    https://www.acens.com/wp-content/images/2014/02/bbdd-nosql-wp-acens.pdf<br>
+    https://www.unir.net/ingenieria/revista/bases-datos-big-data/<br>
+    https://centrogeo.repositorioinstitucional.mx/jspui/bitstream/1012/154/1/10-Geodatabase%20-%20Diplomado%20en%20An%C3%A1lisis%20de%20Informaci%C3%B3n%20Geoespacial.pdf
+    
+     
+</section>
+
+<footer>
+<a style="text-decoration: none; color: white;" href="4.4.4.html" id="e2">
+    Siguiente tema
+</a>
+</footer>
+
+    </div>
+
+</body>
+</html>

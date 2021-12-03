@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Unidad 4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="csss.css">
+</head>
+<body>
+    <div id="agrupar">
+<header id="cabecera">
+    <h1>4.2 Manejo de Nube</h1>
+    Hecho por: Juan Patricio Del Angel Velazquez
+</header>
+<section id="bd">
+<h2>4.2 Manejo de Nube</h2>
+
+Una base de datos en la nube es una colección de contenido informativo, ya sea estructurado o no estructurado, que reside en una plataforma de infraestructura de computación en la nube privada, pública o híbrida. Desde una perspectiva estructural y de diseño, una base de datos en la nube no es diferente de una que opera en los propios servidores locales de una empresa. La diferencia fundamental radica en el lugar donde reside la base de datos.
+<br><br>Cuando una base de datos local está conectada a usuarios locales a través de la red de área local (LAN) interna de una corporación, una base de datos en la nube reside en servidores y almacenamiento proporcionados por un proveedor de nube o base de datos como servicio (DBaaS) y se accede únicamente a través del internet. Para una aplicación de software, por ejemplo, una base de datos SQL que reside en las instalaciones o en la nube debería parecer idéntica.
+<br><br>
+El comportamiento de la base de datos debe ser el mismo ya sea que se acceda a través de consultas directas, como declaraciones SQL, o mediante llamadas a API. Sin embargo, puede ser posible discernir pequeñas diferencias en el tiempo de respuesta. Es probable que una base de datos local, a la que se accede con una LAN, proporcione una respuesta un poco más rápida que una base de datos basada en la nube, que requiere un viaje de ida y vuelta en internet para cada interacción con la base de datos.
+<br><br>
+<h3>Funcionamiento
+</h3>
+Las bases de datos en la nube, al igual que sus ancestros tradicionales, se pueden dividir en dos categorías amplias: relacionales y no relacionales.
+<br>
+Una base de datos relacional, normalmente escrita en lenguaje de consulta estructurado (SQL), se compone de un conjunto de tablas interrelacionadas que se organizan en filas y columnas. La relación entre tablas y columnas (campos) se especifica en un esquema. Las bases de datos SQL, por diseño, se basan en datos que son muy consistentes en su formato, como transacciones bancarias o un directorio telefónico. Las plataformas y los proveedores de nube más populares incluyen MySQL, Oracle, IBM DB2 y Microsoft SQL Server. Algunas plataformas en la nube como MySQL son de código abierto.
+<br>
+Las bases de datos no relacionales, a veces llamadas NoSQL, no emplean un modelo de tabla. En cambio, almacenan contenido, independientemente de su estructura, como un solo documento. Esta tecnología es adecuada para datos no estructurados, como contenido de redes sociales, fotos y videos.
+<br><br>
+<h3>Tipos de bases de datos en la nube
+</h3>
+Existen dos modelos de entorno de base de datos en la nube: tradicional y base de datos como servicio (DBaaS).<br><br>
+En un modelo de nube tradicional, una base de datos se ejecuta en la infraestructura de un departamento de TI con una máquina virtual. Las tareas de supervisión y gestión de la base de datos recaen sobre el personal de TI de la organización.
+<br><br>El modelo DBaaS es un servicio de suscripción de pago en el que la base de datos se ejecuta en la infraestructura física del proveedor de servicios. Por lo general, se encuentran disponibles diferentes niveles de servicio. En un arreglo DBaaS clásico, el proveedor mantiene la infraestructura física y la base de datos, dejando que el cliente administre el contenido y la operación de la base de datos.
+<br><br>Alternativamente, un cliente puede configurar un arreglo de alojamiento administrado, en el que el proveedor maneja el mantenimiento y la administración de la base de datos. Esta última opción puede resultar especialmente atractiva para las pequeñas empresas que necesitan bases de datos pero carecen de la experiencia en TI adecuada.
+<br><br>
+<h3>Beneficios de la base de datos en la nube
+</h3>
+En comparación con el funcionamiento de una base de datos tradicional en un servidor físico en el sitio y una arquitectura de almacenamiento, una base de datos en la nube ofrece las siguientes ventajas distintivas:<br><br>
+•	Eliminación de la infraestructura física — en un entorno de base de datos en la nube, el proveedor de servidores, almacenamiento y otra infraestructura de computación en la nube es responsable del mantenimiento y la alta disponibilidad. La organización que posee y opera la base de datos solo es responsable de respaldar y mantener el software de la base de datos y su contenido. En un entorno DBaaS, el proveedor de servicios es responsable de administrar y operar el software de la base de datos, dejando a los usuarios de DBaaS responsables solo de sus propios datos.<br>
+•	Ahorro de costos — mediante la eliminación de una infraestructura física propiedad y operada por un departamento de TI, se pueden lograr ahorros significativos a partir de la reducción de los gastos de capital, menos personal, menores costos operativos eléctricos y de HVAC y una menor cantidad de espacio físico necesario.<br><br>
+Los beneficios de DBaaS también incluyen escalabilidad instantánea, garantías de rendimiento, soporte de failover, precios decrecientes y experiencia especializada.<br><br>
+<h3>Migrar bases de datos heredadas a la nube
+</h3>
+Una base de datos local puede migrar a una implementación en la nube. Existen numerosas razones para hacer esto, incluidas las siguientes:<br><br>
+•	Permite que TI retire la infraestructura de almacenamiento y el servidor físico local.<br>
+•	Llena la brecha de talento cuando TI carece de la experiencia adecuada en bases de datos internas.<br>
+•	Mejora la eficiencia del procesamiento, especialmente cuando las aplicaciones y los análisis que acceden a los datos también residen en la nube.<br>
+o	Reducción de personal informático interno.<br>
+o	Precios de servicios en la nube en constante declive.<br>
+o	Pagar solo por los recursos consumidos, lo que se conoce como precio de pago por uso.<br>s
+
+
+</section>
+
+<section id="hf">
+    <h3>
+        Bibliografia:
+    </h3>
+    Tópicos Selectos de TI: Tecnologías Emergentes en el Área de Base de Datos (topicos5101jhbc.blogspot.com)<br>
+    ¿Qué es Base de datos en la nube? - Definición en WhatIs.com (computerweekly.com)<br>
+    https://www.acens.com/wp-content/images/2014/02/bbdd-nosql-wp-acens.pdf<br>
+    https://www.unir.net/ingenieria/revista/bases-datos-big-data/<br>
+    https://centrogeo.repositorioinstitucional.mx/jspui/bitstream/1012/154/1/10-Geodatabase%20-%20Diplomado%20en%20An%C3%A1lisis%20de%20Informaci%C3%B3n%20Geoespacial.pdf
+    
+     
+</section>
+
+<footer>
+<a style="text-decoration: none; color: white;" href="4.3.3.html" id="e2">
+    Siguiente tema
+</a>
+</footer>
+
+    </div>
+
+</body>
+</html>
