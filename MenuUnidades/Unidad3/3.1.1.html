@@ -9,20 +9,33 @@
 <body>
     <div id="agrupar">
 <header id="cabecera">
-    <h1>3.1 Introducción a las Bases de Datos Distribuidas</h1>
+    <h1>3.2 Arquitectura SBDD</h1>
     Hecho por: Ricardo Martinez Franco
     <time>25/10/2021</time>
 </header>
 <section id="bd">
-    <h2>
-        3.1 Introducción a las Bases de Datos Distribuidas</h2><br>
+    
+<h2>    3.2 Arquitectura SBDD
+</h2><br>
+  Los SGBDD son un producto software que permiten la gestión de la base de datos y posibilitan una distribución transparente a los usuarios. 
+<br><br>
+  El SGBDD debe contar con funciones de un SGBD, centralizado y además con funciones tales como: 
+<br>
+ <br> •	Capacidad de acceder a sitios remotos y transmitir consultas y datos entre diversos sitios a través de una red de ordenadores. 
+<br>•	Capacidad de rastrear la traza de distribución y de replicación de los datos en el catálogo de SGBDD.
+<br>•	Capacidad de elaborar estrategias de ejecución para consultas y transacciones con acceso a datos situados en nodos diferentes. 
+<br>•	Capacidad de mantener la consistencia en las réplicas de un elemento de información. 
+<br>•	Capacidad de decidir cuál de las copias de un elemento de información será accedida. 
+<br>•	Capacidad de recuperación ante caídas de sitios individuales y fallos de un enlace de comunicación.
+<br><br>
+<h4>El SGBDD debe contar con los siguientes componentes para poder ofrecer estas funcionalidades descritas:
+</h4>
+<br>•	Procesador de datos locales que se encarga de la gestión local de los datos de forma parecida al software de un SGBD centralizado, por lo que además de ejecutar transacciones locales se encarga de la concurrencia y la recuperación ante fallos a nivel local. 
+<br><br>•	Diccionario o directorio global donde se guardará información acerca de dónde y cómo se almacenan los datos, el modo de acceso y otras características físicas. En resumen, contiene las especificaciones necesarias para pasar de la representación externa o esquema externo de los datos a la representación interna de los mismos. 
+<br><br>•	Procesador de aplicaciones distribuidas que es el responsable de las funciones distribuidas. Accede a la información sobre la ubicación de los datos, que se encuentra en el diccionario, y se ocupa de procesar todas las peticiones que involucran más de una sede para generar un plan de ejecución distribuido. Es el elemento diferenciador en los sistemas distribuidos, dada una operación se encargará de repartir el trabajo a los distintos procesadores locales que intervienen en dicha operación. 
+<br><br>•	Software y red de comunicaciones. No forma parte estrictamente del SGBDD sino que provee al procesador de aplicaciones distribuidas primitivas y servicios de comunicaciones para que éste lleve a cabo su labor.
 
-        Las Bases de Datos Distribuidas (BDD) son la unión de dos conceptos que, en principio, pueden parecer opuestos: los Sistemas Gestores de Bases de Datos (SGBD), y por otro lado, los sistemas en red.
-       <br>
-        los SGDB, son sistemas, con sus correspondientes aplicaciones y archivos, de gestión y almacenamiento de datos que están disponibles en un solo lugar. La tecnología de redes de computadores, por otra parte, promueve un modo de trabajo que va en contra de todo esfuerzo de centralización.
-        <br>
-        La clave para entender esto es darse cuenta de que el objetivo principal de Las Bases de Datos Distribuidas no es la centralización sino más bien la integración, lograr la integración y distribución y que ambos enfoques no pierdan su naturaleza esencial.
-        
+
 
 </section>
 
@@ -38,7 +51,7 @@
 </section>
 
 <footer>
-<a style="text-decoration: none; color: white;" href="2.2.html" id="e2">
+<a style="text-decoration: none; color: white;" href="3.3.html" id="e2">
     Siguiente tema
 </a>
 </footer>
